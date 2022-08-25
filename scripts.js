@@ -92,7 +92,7 @@
         });
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('load', () => {
         Array.from(document.querySelectorAll('.main__devices')).forEach(makeTabs);
         Array.from(document.querySelectorAll('.header__menu')).forEach(makeMenu);
     });
