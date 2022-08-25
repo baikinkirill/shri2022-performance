@@ -308,7 +308,10 @@
         © 1997–2022 ООО «Яндекс»
     </div>
 </footer>
-<script src="scripts.js" defer></script>
+
+<script>
+ (()=>{function e(e,t,r){Array.from(e).forEach(e=>{e.addEventListener(t,r)})}function t(t){let r=t.querySelector(".section__tab_active").dataset.id;const a=t.querySelectorAll(".section__tab"),i=Array.from(a).map(e=>e.dataset.id),n=t.querySelector(".section__select");function s(e){const a=t.querySelector(`.section__tab[data-id=${e}]`),i=t.querySelector(`.section__panel[data-id=${e}]`),s=t.querySelector(".section__tab_active"),c=t.querySelector(".section__panel:not(.section__panel_hidden)");r=e,s.classList.remove("section__tab_active"),s.setAttribute("aria-selected","false"),s.removeAttribute("tabindex"),a.classList.add("section__tab_active"),a.setAttribute("aria-selected","true"),a.setAttribute("tabindex","0"),a.focus({preventScroll:!0}),c.classList.add("section__panel_hidden"),c.setAttribute("aria-hidden","true"),i.classList.remove("section__panel_hidden"),i.setAttribute("aria-hidden","false"),n.value=e}n.addEventListener("input",()=>{s(n.value)}),e(a,"click",e=>{s(e.target.dataset.id)}),e(a,"keydown",e=>{if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;let t=i.indexOf(r);if(37===e.which)--t;else if(39===e.which)++t;else if(36===e.which)t=0;else{if(35!==e.which)return;t=i.length-1}t>=i.length?t=0:t<0&&(t=i.length-1),s(i[t]),e.preventDefault()})}function r(e){let t=!1;const r=document.querySelector(".header__links");e.addEventListener("click",()=>{t=!t,e.setAttribute("aria-expanded",t?"true":"false"),e.querySelector(".header__menu-text").textContent=t?"Закрыть меню":"Открыть меню",r.classList.toggle("header__links_opened",t),r.classList.add("header__links-toggled")})}document.addEventListener("DOMContentLoaded",()=>{Promise.resolve().then(()=>{Array.from(document.querySelectorAll(".main__devices")).forEach(t)}),Promise.resolve().then(()=>{Array.from(document.querySelectorAll(".header__menu")).forEach(r)})})})();
+</script>
 
 </body>
 </html>
